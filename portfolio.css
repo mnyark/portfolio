@@ -12,13 +12,47 @@ background: linear-gradient(to top right, #00f900 0%, #0433ff 100%);
 /* Non-gradient code. This styles things like the text, box, border, etc */
 
 width:100%;
-height:750px;
-border-width:0px;
+height: 700px;
+border-width:5px;
+border-color:#000000;
+border-style:solid;
+padding:1.5em;
+
+
+
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 550px){
+
+div.background{
+
+/* Code for the gradient */
+background: -webkit-gradient(linear, left bottom, right top, color-stop(0, #ff40ff), color-stop(1, #00fdff));
+background: -webkit-linear-gradient(bottom left, #ff40ff 0%, #00fdff 100%);
+background: -moz-linear-gradient(bottom left, #ff40ff 0%, #00fdff 100%);
+background: -o-linear-gradient(bottom left, #ff40ff 0%, #00fdff 100%);
+background: -ms-linear-gradient(bottom left, #ff40ff 0%, #00fdff 100%);
+background: linear-gradient(to top right, #ff40ff 0%, #00fdff 100%);
+
+/* Non-gradient code. This styles things like the text, box, border, etc */
+color:#996600;
+width:100%;
+height:700px;
+border-width:5px;
 border-color:#000000;
 border-style:solid;
 padding:1.5em;
 
 }
+
+}
+
+
+
+
+
+
 
 
 
