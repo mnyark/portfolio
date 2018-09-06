@@ -1,0 +1,65 @@
+
+<!DOCTYPE HTML>
+
+<title>Maame's Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<style type="text/css">
+	html, body {
+		position: absolute;
+		margin: 0;
+		width: 100%;
+	}
+	#hi{
+		position: absolute;
+		top: 40%;
+		width: 100%;
+		text-align: center;
+	}
+	#hi p{
+		color: #fff;
+		font-size: 80px;
+		text-decoration: none;		
+		font-family: Lobster;
+	}
+	
+	.noselect {
+		-webkit-touch-callout: none; /* iOS Safari */
+	    	-webkit-user-select: none; /* Safari */
+	     	-khtml-user-select: none; /* Konqueror HTML */
+	       	-moz-user-select: none; /* Firefox */
+		-ms-user-select: none; /* Internet Explorer/Edge */
+		user-select: none; /* Non-prefixed version, currently
+					  supported by Chrome and Opera */
+	}
+
+</style>
+
+<canvas id="canvas"></canvas>
+<div id='hi'>
+		<style> a{text-decoration: none;}</style>
+    <p><a href="portfolio.html">Maame's Portfolio</a></p>
+</div>
+<script src="smoke.js"></script>
+<script>
+	var canvas = document.getElementById('canvas')
+	var ctx = canvas.getContext('2d')
+	canvas.width = innerWidth
+	canvas.height = innerHeight
+
+	var party = smokemachine(ctx, [54, 16.8, 18.2])
+	party.start() // start animating
+
+	onmousemove = function (e) {
+		var x = e.clientX
+		var y = e.clientY
+		var n = .5
+		var t = Math.floor(Math.random() * 200) + 3800
+		party.addsmoke(x, y, n, t)
+	}
+
+	setInterval(function(){
+		party.addsmoke(innerWidth/2, innerHeight, 1)
+	}, 100)
+
+</script>

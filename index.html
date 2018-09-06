@@ -1,65 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  <title>Maame's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+<link rel="svg" href="/Desktop/logo.svg">
+<link rel="stylesheet" href="portfolio.css">
 
-<!DOCTYPE HTML>
+</head>
 
-<title>Maame's Portfolio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-<style type="text/css">
-	html, body {
-		position: absolute;
-		margin: 0;
-		width: 100%;
-	}
-	#hi{
-		position: absolute;
-		top: 40%;
-		width: 100%;
-		text-align: center;
-	}
-	#hi p{
-		color: #fff;
-		font-size: 80px;
-		text-decoration: none;		
-		font-family: Lobster;
-	}
-	
-	.noselect {
-		-webkit-touch-callout: none; /* iOS Safari */
-	    	-webkit-user-select: none; /* Safari */
-	     	-khtml-user-select: none; /* Konqueror HTML */
-	       	-moz-user-select: none; /* Firefox */
-		-ms-user-select: none; /* Internet Explorer/Edge */
-		user-select: none; /* Non-prefixed version, currently
-					  supported by Chrome and Opera */
-	}
+<div>
+	<header>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
 
-</style>
+  <a class="navbar-brand" href="#"> <img src="logo.svg" width="40" height="40" alt="">  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<canvas id="canvas"></canvas>
-<div id='hi'>
-		<style> a{text-decoration: none;}</style>
-    <p><a href="portfolio.html">Maame's Portfolio</a></p>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="https://github.com/mnyark">Github</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link disabled" href="#">Resumé</a>
+      </li>
+        <li class="nav-item active">     
+          <a class="nav-link" href="about.html">Auto-Bio</a>
+        </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Twitter</a>
+      </li>
+    </ul>
+  </div>
+  </nav>
+</header>
+
+<div class="container-fluid">
+<div class="background">
+
+<div>
+
+<div class="row justify-content-md-center col-md"><h1 class="display-4 text-white">My Projects</h1></div>
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="atlas.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Atlas</h5>
+    <p class="card-text">This project was designed to be used for data entry and visualization in a research environment. It reads raw data from a spreadsheet and performs computations to generate a graph and a table.</p>
+    <a href="https://atlas-bmjfxxsfzr.now.sh/" target="_blank" class="btn btn-primary">Visit Atlas</a>
+  </div>
+	</div>
+
+  <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="markdown.png" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Markdown Editor</h5>
+    <p class="card-text">This react app allows peer to peer collaboration in a markdown text editor. </p>
+    <a href="https://markdown.maame.me" target="_blank" class="btn btn-primary">Visit Markdown</a>
+  </div>
+  </div>
 </div>
-<script src="smoke.js"></script>
-<script>
-	var canvas = document.getElementById('canvas')
-	var ctx = canvas.getContext('2d')
-	canvas.width = innerWidth
-	canvas.height = innerHeight
 
-	var party = smokemachine(ctx, [54, 16.8, 18.2])
-	party.start() // start animating
+</div>
 
-	onmousemove = function (e) {
-		var x = e.clientX
-		var y = e.clientY
-		var n = .5
-		var t = Math.floor(Math.random() * 200) + 3800
-		party.addsmoke(x, y, n, t)
-	}
-
-	setInterval(function(){
-		party.addsmoke(innerWidth/2, innerHeight, 1)
-	}, 100)
-
-</script>
+</html>
